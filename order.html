@@ -1,0 +1,209 @@
+<html>
+<head>
+<title>mid exam answer</title>
+
+<style>
+body {
+            background-image: url('https://flipdish.imgix.net/XZB8dLy29xAgz7iAOZLV95ateo.jpg?w=1440');
+
+            background-size: cover;
+
+            background-position: center center;
+
+            background-attachment: fixed;
+
+            background-color: #f0f0f0;
+        }
+ h1{
+	font-family:'Times New Roman';
+	font-size:50px;
+	padding-left:20px;
+	margin--top:9%;
+	letter-spacing:2px;
+}
+
+
+ span{
+	color:#ff7200;
+}
+lable{
+color:#ff7200;
+}
+h4{
+color:#ff7200;
+}
+b{
+color:#ff7200;
+}
+
+
+form {
+  width: 100%;
+  
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form h1 {
+  text-align: 30px;
+  font-size: 28px;
+  color: #333;
+}
+
+form h4 {
+  text-align: 30px;
+  font-size: 18px;
+  color: #666;
+  position: absolute;
+            top: 8%;
+            left: 3.5%;
+}
+
+
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select,
+textarea {
+  width: calc(100% - 12px);
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ff7200;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button {
+  background-color: #ff8c3a;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+textarea {
+  resize: vertical;
+}
+.post1 {
+            width: 110px;
+            height: 120px;
+            background-color: white;
+            position: absolute;
+            top: 4%;
+            left: 32%;
+       }
+p{
+
+            position: absolute;
+            top: 4%;
+            left: 19%;
+}
+.a{
+
+            position: absolute;
+            top: 7%;
+            left: 19%;
+}	   
+.b{
+
+            position: absolute;
+            top: 10%;
+            left: 19%;
+}
+</style>
+<script>
+function calculatebill(){
+	
+	console.log("Hi");
+             var name= document.getElementById("name").value;
+             var qty=parseInt(document.getElementById("quantity").value);
+             var food= document.getElementById("food").value;
+             var vegi= document.getElementById("vegi").value;
+             var nonvegi= document.getElementById("nonvegi").value;
+             var price=0;
+             switch(food){
+                    case "burger" :
+                            price= qty*1000;
+                            break;
+                    case "pasta" :
+                            price= qty*1500;
+                            break;
+
+                    case "pizza" :
+                            price= qty*2000;
+                            break;
+
+           }
+            if(nonvegi == "nonvegi"){
+                         price= price + 500*qty;
+           }
+            alert("Dear "+name+" , Total payment is: Rs. "+price+"("+qty+vegi+food+")");
+}
+</script>
+
+
+
+</head>
+
+<body>
+
+           <form >
+            <fieldset style="width:40%;">	
+			<p style="color:#666;">pizzashop@gmail.com<p>
+            <p class="a" style="color:#666;">076 - 4165 833<p>
+			<p class="b" style="color:#666;">Kandy Rode / nawala<p>
+		   
+		   <h1> <span>Special Pizza  </span></h1><br><br><br>
+            <h4>Online Pizza Order Form</h4>
+			<lable for="name" >Name : </lable>
+			<input type="text" id="name" name="myname" required ></input><br><br>
+			<lable for="mail">E mail : </lable>
+			<input type="email" id="mail" name="mymail" required ></input><br><br>
+			<lable for="number">phone number : </lable>
+			<input type="text" id="number" name="mynumber"  required ></input><br><br>
+			
+			<lable for="food">Select Food : </lable>
+			<select id="food">
+			<option value="burgur">Burgur</option>
+			<option value="pasta">Pasta</option>
+			<option value="piza">Piza</option>
+			</select><br><br><br><br>
+			<lable for="foodtype">Food Type: </lable>
+			<input type="radio" id="nonvegi" name="f" value="nonvegi" required ><b>non-Vegitarian</b></input>	
+			<input type="radio" id="vegi" name="f" value="vegi" required ><b>Vegitarian</b></input><br><br>	
+
+            <lable for="quantity">Quantity : </lable>
+			<input type="number" id="quantity" name="quantity" required ></input><br><br>
+         
+		     <lable for="comment">Aditional comment : </lable><br>
+			 <textarea id="comment" name="comment" rows="4"></textarea>  <br><br>
+			 
+			 <button type="submit"  onclick="calculatebill()">submit</buutton><br><br>
+
+</fieldset>	
+</form>
+<img class="post1" src="https://static.vecteezy.com/system/resources/thumbnails/020/003/555/small/pizza-chef-man-cartoon-character-free-vector.jpg"  >
+	
+</body>
+</html>
